@@ -16,7 +16,8 @@ var usuarioSchema = new Schema({
     email: { type: String, unique: true, required: [true, 'El correo es necesario'] },
     password: { type: String, required: [true, 'La contraseña es necesario'] },
     img: { type: String, required: false },
-    role: { type: String, required: true, default: 'USER_ROLE', enum: rolesvalidos }
+    role: { type: String, required: true, default: 'USER_ROLE', enum: rolesvalidos },
+    google: { type: Boolean, default: false }
 });
 
 //con el plugin unique-validator controlo el error que arroja los atributos que tienen que ser unicos
